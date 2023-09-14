@@ -3,7 +3,7 @@ name: Deploy React App and Publish Docker image
 on:
   push:
     branches:
-      - main  # You can change this to your main branch name
+      - main  
 
 jobs:
   build_and_publish:
@@ -16,13 +16,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 14  # You can change this to your desired Node.js version
+          node-version: 14  
 
       - name: Install dependencies
-        run: npm install  # Or use `yarn install` if you prefer Yarn
+        run: npm install  
 
       - name: Build React App
-        run: npm run build  # Or use your build script if it's different
+        run: npm run build  
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
